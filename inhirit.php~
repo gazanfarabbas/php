@@ -1,0 +1,22 @@
+<?php
+ini_set('display_errors',1);
+error_reporting(E_ALL);
+class A{
+	public $a = 10;
+	public $b = 5;
+	public static $x = 'Static';
+	public function Add(){  
+		$c= $this->a + $this->b;
+		echo "Addtion: ".$c;
+	}
+} 
+class B extends A{
+	public function Sub(){
+		$c= $this->a - $this->b;
+		echo self::$x;
+		echo "Subtraction:".$c;
+	}
+}
+$b = new B;
+$b->Sub();
+?>
